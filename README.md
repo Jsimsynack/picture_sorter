@@ -29,7 +29,7 @@ drwxr-xr-x 4 root root 4096 Jan 27 19:46 ..<br/>
 ********************************************************************************
 CREATING COPIES OF SAMPLE.JPG FOR MOM,DAD,BROTHER
 ********************************************************************************
-$ python pic_sorter.py -n mom,dad,brother -f sample.jpg
+$ python pic_sorter.py -n mom,dad,brother -f sample.jpg<br/>
 [+] Beginning copying process for file: sample.jpg<br/>
 
 [+] Successfully copied the following files:<br/>
