@@ -1,8 +1,10 @@
 import os,hashlib,argparse,subprocess,sys
 
 parser = argparse.ArgumentParser(description="Program for Automatically Copying and Sorting Photos")
-parser.add_argument("-n","--names",help="Enter a list of family names. Ex: -f John,Sarah,Christopher",required=True)
-parser.add_argument("-f","--file",help="Enter the file name. Ex: -f file.jpg")
+parser.add_argument("-n","--names",help="Enter a list of family names. Ex: -n John,Sarah,Christopher",required=True)
+parser.add_argument("-f","--file",help="Enter the file name. Ex: -f file.jpg",required=True)
+parser.add_argument("-a","--addnames",action="store_true", help="Set flag to ignore <file_name.ext.copied> file",required=False)
+
 args = vars(parser.parse_args())
 
 def get_name_list(arguments: dict) -> list:
@@ -71,8 +73,8 @@ def main() -> None:
     # Read File Data
     f_data = get_file(args["file"])
 
-    # Checks if file is already copied; If so, exits
-    if already_copied(f'{args["file"]}'):
+    # Checks if file is already copied && If -a flag is not set; If so, exits
+    if already_copied(f'{args["file"]}') and not args["addnames"]:
         print(f"[+] File {args['file']} is already copied")
         print(f"----{args['file']}")
         print(f"----{args['file']}.copied")
