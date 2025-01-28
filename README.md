@@ -9,7 +9,7 @@ Features:
 - Automatically checks for and creates directories for organization
 - Checks if files already copied
 - Appends SHA256 hash to each copied file for unique name to avoid overwriting
-- Creates <file.ext>.copied file upon completion 
+- Creates <file.ext.copied> file upon completion 
 
 Usage:
 - python pic_sorter.py -n <comma seperated family names> -f <file.ext>
