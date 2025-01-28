@@ -9,7 +9,6 @@ def get_name_list(arguments: dict) -> list:
     new_list = arguments["names"].split(",")
     return new_list
 
-# Checks if the file path exists already
 def exists_already(abs_path: str) -> bool:
     if os.path.exists(abs_path):
         return True
@@ -33,7 +32,6 @@ def get_unique_names(file_data: str,family_name: str) -> str:
     return new_name
 
 def copy_pics(path:str, file_data: bytes)-> bool:
-
     try:
         with open(path,'wb') as temp:
             temp.write(file_data)
@@ -57,7 +55,7 @@ def mark_copied(file_name: str) -> None:
     except:
         print(f"Error copying file: {file_name}")
 
-def already_copied(file_name):
+def already_copied(file_name: str) -> bool:
     cwd = os.getcwd()
     path = os.path.join(cwd, f"{file_name}.copied")
     if os.path.exists(path):
@@ -65,7 +63,12 @@ def already_copied(file_name):
     else:
         return False
 
-def main():
+def main() -> None:
+
+    successful_copies = []
+    already_exits = []
+
+    # Read File Data
     f_data = get_file(args["file"])
 
     # Checks if file is already copied; If so, exits
@@ -75,9 +78,8 @@ def main():
         print(f"----{args['file']}.copied")
         sys.exit()
 
+    # Gathers Names
     name_list = get_name_list(args)
-    successful_copies = []
-    already_exits = []
 
     print(f"[+] Beginning copying process for file: {args['file']}")
 
@@ -100,7 +102,8 @@ def main():
             # Checks if the copy was successful; If so, append it to success list
             if status:
                 successful_copies.append(ab_path)
-        
+
+    # Make "<file_name.ext>.copied" to avoid redundancy
     mark_copied(args["file"])
     
     print(f'\n[+] Successfully copied the following files:')
