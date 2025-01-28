@@ -20,10 +20,11 @@ Ex:
 LIST OF FILES IN CURRENT DIRECTORY 
 ********************************************************************************
 $ ls -la 
-drwxr-xr-x 2 root root 4096 Jan 27 21:03 .
-drwxr-xr-x 4 root root 4096 Jan 27 19:46 ..
--rw-r--r-- 1 root root 3622 Jan 27 20:41 pic_sorter.py
--rw-r--r-- 1 root root 4197 Jan 27 19:39 sample.jpg
+
+drwxr-xr-x 2 root root 4096 Jan 27 21:03 .\n
+drwxr-xr-x 4 root root 4096 Jan 27 19:46 ..\n
+-rw-r--r-- 1 root root 3622 Jan 27 20:41 pic_sorter.py\n
+-rw-r--r-- 1 root root 4197 Jan 27 19:39 sample.jpg\n
 
 ********************************************************************************
 CREATING COPIES OF SAMPLE.JPG FOR MOM,DAD,BROTHER
