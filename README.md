@@ -30,63 +30,63 @@ drwxr-xr-x 4 root root 4096 Jan 27 19:46 ..<br/>
 CREATING COPIES OF SAMPLE.JPG FOR MOM,DAD,BROTHER
 ********************************************************************************
 $ python pic_sorter.py -n mom,dad,brother -f sample.jpg
-[+] Beginning copying process for file: sample.jpg
+[+] Beginning copying process for file: sample.jpg<br/>
 
-[+] Successfully copied the following files:
-----/root/building_picture_sorter/testing_environment/mom/mom-78c52be015
-----/root/building_picture_sorter/testing_environment/dad/dad-78c52be015
-----/root/building_picture_sorter/testing_environment/brother/brother-78c52be015
+[+] Successfully copied the following files:<br/>
+----/root/building_picture_sorter/testing_environment/mom/mom-78c52be015<br/>
+----/root/building_picture_sorter/testing_environment/dad/dad-78c52be015<br/>
+----/root/building_picture_sorter/testing_environment/brother/brother-78c52be015<br/>
 
-[+] The following files already exist:
+[+] The following files already exist:<br/>
 
-[+] Completed!
+[+] Completed!<br/>
 
 ********************************************************************************
 LISTING ALL OF FILES/DIRECTORIES CREATED 
 ********************************************************************************
-$ ls -la
--rw-r--r-- 1 root root 3622 Jan 27 20:41 pic_sorter.py
--rw-r--r-- 1 root root 4197 Jan 27 19:39 sample.jpg
--rw-r--r-- 1 root root 4197 Jan 27 21:04 sample.jpg.copied
+$ ls -la<br/>
+-rw-r--r-- 1 root root 3622 Jan 27 20:41 pic_sorter.py<br/>
+-rw-r--r-- 1 root root 4197 Jan 27 19:39 sample.jpg<br/>
+-rw-r--r-- 1 root root 4197 Jan 27 21:04 sample.jpg.copied<br/>
 
-brother:
-total 16
-drwxr-xr-x 2 root root 4096 Jan 27 21:04 .
-drwxr-xr-x 5 root root 4096 Jan 27 21:04 ..
--rw-r--r-- 1 root root 4197 Jan 27 21:04 brother-78c52be015
+brother:<br/>
+total 16<br/>
+drwxr-xr-x 2 root root 4096 Jan 27 21:04 .<br/>
+drwxr-xr-x 5 root root 4096 Jan 27 21:04 ..<br/>
+-rw-r--r-- 1 root root 4197 Jan 27 21:04 brother-78c52be015<br/>
 
-dad:
-total 16
-drwxr-xr-x 2 root root 4096 Jan 27 21:04 .
-drwxr-xr-x 5 root root 4096 Jan 27 21:04 ..
--rw-r--r-- 1 root root 4197 Jan 27 21:04 dad-78c52be015
+dad:<br/>
+total 16<br/>
+drwxr-xr-x 2 root root 4096 Jan 27 21:04 .<br/>
+drwxr-xr-x 5 root root 4096 Jan 27 21:04 ..<br/>
+-rw-r--r-- 1 root root 4197 Jan 27 21:04 dad-78c52be015<br/>
 
-mom:
-total 16
-drwxr-xr-x 2 root root 4096 Jan 27 21:04 .
-drwxr-xr-x 5 root root 4096 Jan 27 21:04 ..
--rw-r--r-- 1 root root 4197 Jan 27 21:04 mom-78c52be015
+mom:<br/>
+total 16<br/>
+drwxr-xr-x 2 root root 4096 Jan 27 21:04 .<br/>
+drwxr-xr-x 5 root root 4096 Jan 27 21:04 ..<br/>
+-rw-r--r-- 1 root root 4197 Jan 27 21:04 mom-78c52be015<br/>
 
 ********************************************************************************
 RUNNING SAME ARGUMENTS AGAIN
 ********************************************************************************
-$ python pic_sorter.py -n mom,dad,brother -f sample.jpg
-[+] File sample.jpg is already copied
-----sample.jpg
-----sample.jpg.copied
+$ python pic_sorter.py -n mom,dad,brother -f sample.jpg<br/>
+[+] File sample.jpg is already copied<br/>
+----sample.jpg<br/>
+----sample.jpg.copied<br/>
 
 ********************************************************************************
 ADDING MORE PEOPLE FOR SAME PHOTO (Ignores <file_name.ext.copied> file during initial check)
 ********************************************************************************
-$ python pic_sorter.py -n mom,dad,brother,sister -f sample.jpg -a
-[+] Beginning copying process for file: sample.jpg
+$ python pic_sorter.py -n mom,dad,brother,sister -f sample.jpg -a<br/>
+[+] Beginning copying process for file: sample.jpg<br/>
 
-[+] Successfully copied the following files:
-----/root/building_picture_sorter/testing_environment/sister/sister-78c52be015
+[+] Successfully copied the following files:<br/>
+----/root/building_picture_sorter/testing_environment/sister/sister-78c52be015<br/>
 
-[+] The following files already exist:
-----/root/building_picture_sorter/testing_environment/mom/mom-78c52be015
-----/root/building_picture_sorter/testing_environment/dad/dad-78c52be015
-----/root/building_picture_sorter/testing_environment/brother/brother-78c52be015
+[+] The following files already exist:<br/>
+----/root/building_picture_sorter/testing_environment/mom/mom-78c52be015<br/>
+----/root/building_picture_sorter/testing_environment/dad/dad-78c52be015<br/>
+----/root/building_picture_sorter/testing_environment/brother/brother-78c52be015<br/>
 
-[+] Completed!
+[+] Completed!<br/>
