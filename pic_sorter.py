@@ -75,15 +75,15 @@ def main() -> None:
         print(f"[+] {args['file']} does not exist.\n[+] Exiting...")
         sys.exit()
 
-    # Read File Data
-    f_data = get_file(args["file"])
-
     # Checks if file is already copied && If -a flag is not set; If so, exits
     if already_copied(f'{args["file"]}') and not args["addnames"]:
         print(f"[+] File {args['file']} is already copied")
         print(f"----{args['file']}")
         print(f"----{args['file']}.copied")
         sys.exit()
+        
+    # Read File Data
+    f_data = get_file(args["file"])
 
     # Gathers Names
     name_list = get_name_list(args)
