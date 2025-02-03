@@ -30,7 +30,7 @@ def get_file(file_name: str) -> bytes:
 
 def get_unique_names(file_data: str,family_name: str) -> str:
     sha256_hash = hashlib.sha256(file_data).hexdigest()
-    new_name = f"{family_name}-{sha256_hash[:10]}"
+    new_name = f"{family_name}-{sha256_hash[:20]}"
     return new_name
 
 def copy_pics(path:str, file_data: bytes)-> bool:
