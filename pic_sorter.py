@@ -70,6 +70,11 @@ def main() -> None:
     successful_copies = []
     already_exits = []
 
+    # Checks if the file exists
+    if not exists_already(args["file"]):
+        print(f"[+] {args['file']} does not exist.\n[+] Exiting...")
+        sys.exit()
+
     # Read File Data
     f_data = get_file(args["file"])
 
